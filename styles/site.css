@@ -1,0 +1,679 @@
+/*
+We will pursue a mobile design then desktop design model
+
+============================================================
+=================     Mobile Design    ===================
+============================================================
+*/
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*
+=================     Interactivity     ===================
+*/
+.hidden {
+  display: none;
+}
+
+/*
+=================     Navigation Bar     ===================
+*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background-color: #e9fbf3;
+  box-shadow: 1px 1px 8px rgb(46, 46, 46);
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  margin-bottom: 30px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.heading-title {
+  font-family: verdana, sans-serif;
+  font-size: 200%;
+  padding: 0px;
+}
+
+.logo {
+  width: 135px;
+  height: 60px;
+}
+
+.home-link {
+  position: absolute;
+  z-index: 7;
+  padding-top: 8px;
+}
+
+.button-holder {
+  position: relative;
+  z-index: 8;
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+}
+
+.hamburger-menu {
+  right: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-style: none;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.0);
+  font-size: 30px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+nav {
+  font-family: verdana, sans-serif;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 80px;
+  z-index: 7;
+  background-color: rgba(255, 229, 206, 0.8);
+  width: 100%;
+}
+
+nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+  color: #f9aa64;
+  /* background-color: rgba(255,229,206,0.6) */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  font-size: 80%;
+  text-transform: uppercase;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  font-size: 1.8em;
+  padding: 40px 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.currentpage {
+  color: #f9aa64;
+}
+
+footer {
+  margin-top: 10px;
+  color: black;
+  background-color: #f6c9ca;
+  font-family: verdana, sans-serif;
+  text-align: center;
+  font-size: .8em;
+  padding: 1em;
+}
+
+/*
+=================     Home Page     ===================
+*/
+.container {
+  position: absolute;
+  /* display: flex; */
+  position: relative;
+  /* flex-direction: column;
+  flex-grow: 1;
+  justify-content:center;
+  align-items:flex-start; */
+  background-color: #ffffff;
+  line-height: 1.4em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.container>* {
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.column2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+.row2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin: 10px;
+}
+.carousel-button-left, .carousel-button-right {
+  position: relative;
+  z-index: 5;
+  height: 150px;
+  width: 35px;
+  background: rgba(0, 0, 0, 0.0);
+  border-style: none;
+  font-size: 25px;
+  margin: 20px;
+}
+
+.carousel-button-left:hover, .carousel-button-right:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button-left {
+  margin-right: -40px;
+}
+
+.carousel-button-right {
+  margin-left: -35px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.slides {
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  border-width: 5px;
+  border-style: ridge;
+  border-color: white;
+  box-shadow: -1px 1px 8px rgb(46, 46, 46);
+}
+
+.row1 {
+  flex-direction: column-reverse;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.column2 {
+  display: flex;
+  flex-direction: column;
+
+}
+p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-family: din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+
+.info {
+  background-color: #ffedd5;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 1.5em;
+  margin-left:10px;
+  margin-right: 10px;
+  font-family: din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+
+.goal {
+  font-size: 2.8em;
+  line-height: 1.2em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: lighter;
+  margin: 10px;
+}
+
+.fact {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: serif;
+  line-height: 1.2em;
+  text-align: center;
+  font-family: din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+.join{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-bottom: 20px;
+}
+.button {
+  width: 200px;
+  font-size: 1em;
+  font-style: normal;
+  color: white;
+  display: block;
+  padding: 10px 10px;
+  margin: 0px;
+  margin-top: -20px;
+  border-radius: .5em;
+  background-color: rgb(250,169,98);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+
+.button:hover {
+  background-color: rgb(250,209,138);
+  box-shadow: 1px 1px 8px rgb(46, 46, 46);
+}
+/*
+=================     Our Story      ===================
+*/
+.body {
+  background-color: #ffffff;
+  line-height: 1.4em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#ourstory {
+  margin-left: 10px;
+}
+
+.our-story {
+  font-size: 1.25em;
+  line-height: 1.3em;
+
+}
+
+.quotebox {
+  background-color: rgba(191, 208, 219, 0.30);
+  border-radius: 1em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  box-shadow: 1px 1px 8px rgb(46, 46, 46);
+}
+
+.quote {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3em;
+  width: 85%;
+  line-height: 1.3em;
+  font-style: italic;
+}
+
+.more {
+  display: none;
+}
+
+#readmore {
+  border-radius: 2em;
+  border-color: #ffffff;
+  padding: 0.3em 1.0em;
+  font-weight: bold;
+}
+
+#readmore:hover {
+  border-color: #ffe5ce;
+  cursor: pointer;
+}
+
+.storyphotos {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  margin-top: 20px;
+}
+
+.bottom {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.infophotos {
+  width: 100%;
+  margin: 10px;
+  border-width: 5px;
+  border-style: ridge;
+  border-color: white;
+  box-shadow: -1px 1px 8px rgb(46, 46, 46);
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*
+=================     Team Page      ===================
+*/
+h3 {
+  margin: 0;
+  margin-top: 0.8em;
+  color: pink;
+  text-align: center;
+  font-family: serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1em;
+    text-shadow: 1px 1px 1px rgb(146, 146, 146);
+}
+
+h5 {
+  margin: 0;
+  margin-top: 0em;
+  color: pink;
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.text-and-image {
+  max-width: 800px;
+  display: flex;
+  margin: 0em;
+  padding: 0em;
+  flex-direction: column;
+}
+
+.picture-box {
+  margin: auto;
+  width: 100%;
+}
+
+.text-box {
+  font-family: serif;
+  color: black;
+}
+
+/*
+=================     Contact Us      ===================
+*/
+h1 {
+  line-height: 1.25em;
+}
+
+.qrcodes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.qrcode {
+  border-width: 2px;
+  border-style: ridge;
+  border-color: white;
+  box-shadow: -1px 1px 8px rgb(46, 46, 46);
+}
+
+.img1, .img2 {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+/*
+============================================================
+=================     Desktop Design     ===================
+============================================================
+*/
+@media (min-width: 600px) {
+
+  /*
+  =================     Navigation Bar     ===================
+  */
+  header {
+    position: relative;
+    z-index: 0;
+    height: 85px;
+    padding-right: 10px;
+  }
+
+  .logo {
+    width: 150px;
+    height: 80px;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+
+  .button-holder {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .logo {
+    width: 150px;
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .home-link {
+    position: relative;
+    z-index: -1;
+    padding-top: 8px;
+    padding-right: 20px;
+    margin-right: 5%;
+    padding-left: 5%;
+  }
+
+  nav {
+    position: relative;
+    padding-left: 20%;
+    background-color: rgba(255, 229, 206, 0.0);
+    margin-top: -150px;
+  }
+
+  nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+    background-color: rgba(255, 229, 206, 0)
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  nav ul li {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3em;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+  }
+
+  /*
+  =================     Home Page     ===================
+  */
+  .container {
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-direction: row; */
+  }
+
+  .slide {
+    width: 400px;
+  }
+
+  .carousel-button-left, .carousel-button-right {
+    height: 60px;
+    width: 30px;
+  }
+
+  .row1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .quote {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+  .fact{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .column1{
+    display: flex;
+    flex-direction: row;
+  }
+  /*
+  =================     Our Story      ===================
+  */
+  .text-and-image {
+    flex-direction: row;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    flex-grow: 2;
+    margin: 10px;
+    width: 70%;
+  }
+
+  aside {
+    flex-grow: 1;
+    width: 30%;
+  }
+
+  .infophotos {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .bottom {
+    width: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+    margin: 0 auto;
+  }
+
+  .our-story {
+    font-size: 1.1em;
+
+  }
+
+  /*
+  =================     Team      ===================
+  */
+  .text-and-image {
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .picture-box {
+    margin: auto;
+    width: 100%;
+  }
+
+  .text-box {
+    margin-left: 2em;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 85%;
+  }
+
+  /*
+  =================     Contact Us      ===================
+  */
+  .qrcodes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .img1, .img2 {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
